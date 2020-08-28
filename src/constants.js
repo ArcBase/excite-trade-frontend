@@ -1,5 +1,5 @@
-//const localhost = "https://trade-backkn.herokuapp.com";
-const localhost = "https://trade-backkn.herokuapp.com";
+//const localhost = "https://trade-backn.herokuapp.com";
+const localhost = "https://trade-backn.herokuapp.com";
 const apiURL = "/api";
 
 export const endpoint = `${localhost}${apiURL}`;

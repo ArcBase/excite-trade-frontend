@@ -7,7 +7,7 @@ import {message} from 'antd'
 import VendorDetailsTable from '../components/vDetailsTable'
 import {Bar, Line ,Radar} from 'react-chartjs-2';
 
-const host = 'https://trade-backkn.herokuapp.com'
+const host = 'https://trade-backn.herokuapp.com'
 
 class adminVendorDetailsManagement extends Component {
   state = {

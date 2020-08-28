@@ -30,7 +30,7 @@ export const getVendorStart = () => {
         Authorization: `Token ${token}`
       };
       axios
-        .get(`https://trade-backkn.herokuapp.com/api/f-details/${id}/`)
+        .get(`https://trade-backn.herokuapp.com/api/f-details/${id}/`)
         .then(res => {
           const info = {
                 "id": res.data.id,

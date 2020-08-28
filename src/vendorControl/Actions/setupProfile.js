@@ -19,7 +19,7 @@ import {
   } from 'antd';
 
   const { Option } = Select;
-  const host = 'https://trade-backkn.herokuapp.com'
+  const host = 'https://trade-backn.herokuapp.com'
 
 class vendorSetupProfile extends Component {
   state = {

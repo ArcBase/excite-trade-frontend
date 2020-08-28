@@ -8,7 +8,7 @@ import OrderList from './components/orderListTables'
 import {Bar, Line ,Radar} from 'react-chartjs-2';
 import {message} from 'antd'
 
-const host = 'https://trade-backkn.herokuapp.com'
+const host = 'https://trade-backn.herokuapp.com'
 
 class TradeMain extends Component {
   state = {

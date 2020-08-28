@@ -7,7 +7,7 @@ import { Link, withRouter } from "react-router-dom";
 import VendorListTable from '../components/vListTables'
 import {Bar, Line ,Radar} from 'react-chartjs-2';
 
-const host = 'https://trade-backkn.herokuapp.com'
+const host = 'https://trade-backn.herokuapp.com'
 
 class adminVendorManagement extends Component {
   state = {

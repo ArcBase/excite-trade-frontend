@@ -34,7 +34,7 @@ class FilterForm extends React.Component {
 
       if (!err) {
         axios
-          .get("https://trade-backkn.herokuapp.com/api/", {
+          .get("https://trade-backn.herokuapp.com/api/", {
             params: {
              
             }

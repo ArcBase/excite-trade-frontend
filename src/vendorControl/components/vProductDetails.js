@@ -4,7 +4,7 @@ import axios from "axios";
 import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
 
-const host = 'https://trade-backkn.herokuapp.com'
+const host = 'https://trade-backn.herokuapp.com'
 
 class vendorProductDetails extends Component {
   state = {

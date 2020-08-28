@@ -38,7 +38,7 @@ const { Option } = Select;
 const { RangePicker } = DatePicker;
 const dateFormat = 'YYYY/MM/DD'
 
-const host = 'https://trade-backkn.herokuapp.com'
+const host = 'https://trade-backn.herokuapp.com'
 
 class ProductDetail extends React.Component {
   state = {
@@ -60,7 +60,7 @@ class ProductDetail extends React.Component {
   //   const detailID = this.props.match
   //   this.setState({ loading: true });
   //   axios
-  //     .get(`https://trade-backkn.herokuapp.com/marketplace/${detailID}`)
+  //     .get(`https://trade-backn.herokuapp.com/marketplace/${detailID}`)
   //     .then((res) => {
   //       this.setState({ data: res.data, loading: false });
   //       console.log(this.state.data);

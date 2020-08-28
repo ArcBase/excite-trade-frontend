@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 import {notification,message, Statistic} from 'antd'
 import { ArrowUpOutlined, ArrowDownOutlined } from '@ant-design/icons';
 
-const Product_Analysis = 'https://trade-backkn.herokuapp.com/api/admin-product-rank/'
+const Product_Analysis = 'https://trade-backn.herokuapp.com/api/admin-product-rank/'
 
 class ProductAnalysisReport extends Component{
   state = {

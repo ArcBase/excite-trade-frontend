@@ -26,7 +26,7 @@ const openNotification = (msg) => {
   });
 };
 
-const host = 'https://trade-backkn.herokuapp.com'
+const host = 'https://trade-backn.herokuapp.com'
 
 
 class ProductList extends React.Component {
@@ -52,7 +52,7 @@ class ProductList extends React.Component {
   fetchList = () =>{
       this.setState({ loading: true });
       axios
-      .get('https://trade-backkn.herokuapp.com/marketplace/product-list/')
+      .get('https://trade-backn.herokuapp.com/marketplace/product-list/')
       .then(res => {
         this.setState({ data: res.data, loading: false });
       }).catch(err => {
@@ -61,7 +61,7 @@ class ProductList extends React.Component {
   }
 
   Fetch_Categories = () =>{
-    const category_url = 'https://trade-backkn.herokuapp.com/api/product_filter/category/';
+    const category_url = 'https://trade-backn.herokuapp.com/api/product_filter/category/';
       axios.get(category_url)
       .then(res =>{
         this.setState({
@@ -143,7 +143,7 @@ class ProductList extends React.Component {
           values['Location'] === undefined ? null : values["Location"];
 
         if (!err) {
-         const filter_url = 'https://trade-backkn.herokuapp.com/api/product_filter/'
+         const filter_url = 'https://trade-backn.herokuapp.com/api/product_filter/'
           axios.get(filter_url, {
             params: {
             Title, Category, Price, Location

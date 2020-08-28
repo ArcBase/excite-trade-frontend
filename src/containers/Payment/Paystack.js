@@ -32,7 +32,7 @@ class Paystacker extends Component {
         const transaction_code = response['trans']
         const trxref = response['trxref']
         const Price = this.state.amount
-        axios.get('https://trade-backkn.herokuapp.com/api/store_transaction/',{
+        axios.get('https://trade-backn.herokuapp.com/api/store_transaction/',{
             params :{
                 order_id, refrence_code, transaction_code, trxref , Price
             }

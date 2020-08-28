@@ -21,7 +21,7 @@ import {
   const { Option } = Select;
   const TextArea = Input.TextArea
 
-  const host = 'https://trade-backkn.herokuapp.com'
+  const host = 'https://trade-backn.herokuapp.com'
 
 class createProduct extends Component {
   state = {

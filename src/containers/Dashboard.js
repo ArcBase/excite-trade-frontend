@@ -36,7 +36,7 @@ class Dashboard extends Component {
           Authorization: `Token ${token}`
         };
         axios
-          .get('https://trade-backkn.herokuapp.com/api/f-list/')
+          .get('https://trade-backn.herokuapp.com/api/f-list/')
           .then(res => {
             this.setState({ data: res.data, loading: false });
           }).catch(err => {
@@ -53,7 +53,7 @@ class Dashboard extends Component {
           Authorization: `Token ${token}`
         };
         axios
-          .get('https://trade-backkn.herokuapp.com/api/logistics/')
+          .get('https://trade-backn.herokuapp.com/api/logistics/')
           .then(res => {
             this.setState({ logistics: res.data, loading: false });
           }).catch(err => {
@@ -70,7 +70,7 @@ class Dashboard extends Component {
           Authorization: `Token ${token}`
         };
         axios
-          .get('https://trade-backkn.herokuapp.com/api/f-items-list/')
+          .get('https://trade-backn.herokuapp.com/api/f-items-list/')
           .then(res => {
             this.setState({ products: res.data, loading: false });
             console.log(this.state.products);
