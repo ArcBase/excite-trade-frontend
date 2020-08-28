@@ -9,7 +9,7 @@ import {Bar, Line ,Radar} from 'react-chartjs-2';
 import {message} from 'antd'
 import VendorProductsListTable from './Tables/ProductTables'
 
-const host = 'http://127.0.0.1:8000'
+const host = 'https://trade-backkn.herokuapp.com'
 const vendorProfileURL  = host + `/stream/get_profileID/`
 
 

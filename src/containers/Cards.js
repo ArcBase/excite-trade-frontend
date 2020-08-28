@@ -34,7 +34,7 @@ class ProductListHome extends React.Component {
   fetchList = () => {
     this.setState({ loading: true });
     axios
-      .get("http://127.0.0.1:8000/marketplace/product-list/")
+      .get("https://trade-backkn.herokuapp.com/marketplace/product-list/")
       .then((res) => {
         this.setState({ data: res.data.slice(0, 4), loading: false });
         console.log(productListURL);

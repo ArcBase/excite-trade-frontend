@@ -1,5 +1,5 @@
-//const localhost = "http://127.0.0.1:8000";
-const localhost = "http://127.0.0.1:8000";
+//const localhost = "https://trade-backkn.herokuapp.com";
+const localhost = "https://trade-backkn.herokuapp.com";
 const apiURL = "/api";
 
 export const endpoint = `${localhost}${apiURL}`;

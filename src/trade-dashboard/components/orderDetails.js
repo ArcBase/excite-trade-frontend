@@ -25,7 +25,7 @@ import {
   notification,
 } from "antd";
 
-const host = 'http://127.0.0.1:8000'
+const host = 'https://trade-backkn.herokuapp.com'
 
 class adminOrderDetail extends Component {
   state = {

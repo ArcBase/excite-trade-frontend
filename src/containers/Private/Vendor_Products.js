@@ -6,7 +6,7 @@ import { Link, withRouter } from 'react-router-dom';
 import axios from "axios";
 import { connect } from "react-redux";
 
-my_products_url = 'http://127.0.0.1:8000/api/f-list'
+my_products_url = 'https://trade-backkn.herokuapp.com/api/f-list'
 class Famer_Products extends Component{
 
     state = {

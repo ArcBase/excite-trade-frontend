@@ -42,7 +42,7 @@ class ProfileDashboard extends Component {
           Authorization: `Token ${token}`
         };
         axios
-          .get(`http://127.0.0.1:8000/api/f-details/${id}/`)
+          .get(`https://trade-backkn.herokuapp.com/api/f-details/${id}/`)
           .then(res => {
             this.setState({ data: res.data, loading: false });
           }).catch(err => {
@@ -59,7 +59,7 @@ class ProfileDashboard extends Component {
           Authorization: `Token ${token}`
         };
         axios
-          .get('http://127.0.0.1:8000/api/logistics/')
+          .get('https://trade-backkn.herokuapp.com/api/logistics/')
           .then(res => {
             this.setState({ logistics: res.data, loading: false });
             console.log(res.data);
@@ -78,7 +78,7 @@ class ProfileDashboard extends Component {
           Authorization: `Token ${token}`
         };
         axios
-          .get('http://127.0.0.1:8000/api/f-items-list/')
+          .get('https://trade-backkn.herokuapp.com/api/f-items-list/')
           .then(res => {
             this.setState({ products: res.data, loading: false });
             console.log(this.state.products);

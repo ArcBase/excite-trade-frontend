@@ -29,7 +29,7 @@ export const createProduct = (token, postData) => {
         Authorization: `Token ${token}`
       };
       axios
-        .post(`http://127.0.0.1:8000/api/posts/`, postData)
+        .post(`https://trade-backkn.herokuapp.com/api/posts/`, postData)
         .then(res => {
           dispatch(postSuccess(postData));
         })

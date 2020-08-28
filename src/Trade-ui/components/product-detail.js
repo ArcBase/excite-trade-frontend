@@ -34,7 +34,7 @@ const { Option } = Select;
 const { RangePicker } = DatePicker;
 const dateFormat = "YYYY/MM/DD";
 
-const host = "http://127.0.0.1:8000";
+const host = "https://trade-backkn.herokuapp.com";
 
 class ProductDetailTwo extends Component {
   state = {
