@@ -1,0 +1,24 @@
+.root {
+    min-width: 275;
+    max-width: 345;
+  }
+.bullet {
+    display: 'inline-block';
+    margin: '0 2px';
+    transform: 'scale(0.8)';
+}
+.title {
+    font-size: 14;
+  }
+.pos{
+    margin-bottom: 12
+  }
+
+.media {
+    height: 0;
+    padding-top: '56.25%';
+      /* 16:9 */
+  }
+.avatar {
+    background-color: red
+  }
