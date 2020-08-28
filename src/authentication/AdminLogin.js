@@ -15,7 +15,6 @@ import {
 
 const Search = Input.Search;
 const { Option } = Select;
-a ='s'
 
 class AdminLoginForm extends React.Component {
   state = {
