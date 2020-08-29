@@ -60,7 +60,7 @@ class LoginForm extends React.Component {
     const { username, password } = this.state;
     if (token) {
       this.openNotification('Login Successful')
-      return <Redirect to="/vendor/dashboard/" />;
+      return <Redirect to="/customer-dashboard" />;
     }
     const formItemLayout = {
       wrapperCol: { span: 12, offset: 6 }
@@ -83,20 +83,7 @@ class LoginForm extends React.Component {
 
 
                             <div className="access-form-box">
-                            <nav class="access-main-nav">
-                                  <ul>
-                                    <li>
-                                      <Link to="/">
-                                      <div className="ExciteLogoContainer">
-                                      <img
-                                      className="ExciteLogo"
-                                      /> 
-                                      </div>
-                                      </Link>
-                                    </li>
-                                  
-                                  </ul>
-                                </nav>
+                      
 
                             <div className="form-box">
 
@@ -140,7 +127,7 @@ class LoginForm extends React.Component {
                                                   </Form>
 
                                      <div className="">
-                                              <Link to="/select-account/">
+                                              <Link to="/customer-registration">
                                                <p className="access-suggestion">
                                               New here ? Sign Up
                                                 </p>

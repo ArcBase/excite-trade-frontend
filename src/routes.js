@@ -64,7 +64,7 @@ import createProduct from './vendorControl/Actions/createProduct'
 import vendorSetupProfile from './vendorControl/Actions/setupProfile'
 import vendorEditProfile from './vendorControl/Actions/editProfile'
 
-
+import CustomerDashboard from './customer/main'
 
 //HOEme
 import MainLayout from './Trade-ui/main'
@@ -72,8 +72,10 @@ import MainLayout from './Trade-ui/main'
 // import Layout from './Trade-ui/components/main'
 import ProductPage from './Trade-ui/product-page'
 import ProductDetailTwo from './Trade-ui/components/product-detail'
- import AgricPage from './Trade-ui/components/agric-page'
+import AgricPage from './Trade-ui/components/agric-page'
 
+import BuyerRegistration from './authentication/buyer-registration'
+import BuyerOrderDetail from './customer/components/order-detail'
 
 const BaseRouter = () => (
   <Hoc>
@@ -105,7 +107,7 @@ const BaseRouter = () => (
     <Route exact path="/a-logistics" component={Logistics} />{" "}
     <Route exact path="/a-orders" component={Orders} />{" "}
 
-    {/* Authentication */}
+    {/* Authenticationd */}
     <Route exact path="/register/" component={RegistrationForm} />    
     <Route exact path="/login/" component={LoginForm} />
     {/* <Route exact path="/signup/" component={Signup} /> */}
@@ -145,9 +147,13 @@ const BaseRouter = () => (
     <Route exact path="/e-p-detail/:productID" component={ProductDetailTwo} />
     <Route exact path="/eproducts" component={AgricPage} /> 
 
-    {/* Vendor Section starts here */}
+    {/* Vendor Section starts herde */}
+    <Route exact path="/p-cards" component={ProductPage} />
 
-
+    {/* Customer Dashboard */}
+    <Route exact path="/customer-dashboard" component={CustomerDashboard} />
+    <Route exact path="/customer-registration" component={BuyerRegistration} />
+    <Route exact path="/buyer-detail/:orderID" component={BuyerOrderDetail} />
 
   </Hoc>
 );

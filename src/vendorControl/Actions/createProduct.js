@@ -39,7 +39,6 @@ class createProduct extends Component {
 
   getCategories = async()=>{
     const endpoint = host + `/marketplace/category-list/`
-
     
     await axios.get(endpoint)
     .then(res=>{
@@ -90,6 +89,7 @@ class createProduct extends Component {
     if (this.props.token !== undefined && this.props.token !== null) {
         // this.getCategories(this.props.token)
     }
+    this.getCategories(this.props.token)
   }
 
   componentWillReceiveProps(newProps) {

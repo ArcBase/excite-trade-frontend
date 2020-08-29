@@ -513,18 +513,18 @@
   text-align: center;
   color: black;
   padding: 1.5rem 2rem;
-  background-image: url('https://images.unsplash.com/photo-1515526764876-0f3b298ee4ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+  /* background-image: url('https://images.unsplash.com/photo-1515526764876-0f3b298ee4ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'); */
   box-shadow: var(--shadow);
 }
 
 .product-box h3{
   font-size: 1.5rem;
   font-weight: 600;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .product-box p{
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 /* Figure Boxes */
@@ -672,4 +672,22 @@
 
 .order-h1{
   font-size: 1.5rem;
+}
+
+.order-card{
+  /* border: 1px solid #ccc; */
+  margin-top: 20px;
+  width: 30%;
+  margin-left:20px;
+  box-shadow: var(--shadow);
+}
+
+.order-card h1 {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.order-card-content p{
+  color: black;
+  padding: 20px;
 }

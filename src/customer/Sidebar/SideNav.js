@@ -7,6 +7,7 @@ import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
 import clsx from "clsx";
 import { MenuItem, MenuList } from "@material-ui/core";
+import * as actions from '../../store/actions/auth';
 
 // import { faHamburger } from "@fortawesome/free-solid-svg-icons";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -29,7 +30,7 @@ class TempoaryDrawer extends React.Component {
               <MenuItem
                 className="menu-link-text"
                 component={Link}
-                to="/trade-admin"
+                to="/customer-dashboard"
               >
                 Dashboard
               </MenuItem>
@@ -41,22 +42,22 @@ class TempoaryDrawer extends React.Component {
               <MenuItem
                 className="menu-link-text"
                 component={Link}
-                to="/admin/vendor-control/"
+                to="/"
               >
-                Vendor Management
+               Home
               </MenuItem>
             </div>
           </MenuList>
-
 
           <MenuList>
             <div className="menu-link">
               <MenuItem
                 className="menu-link-text"
                 component={Link}
-                to="/admin/vendor-control/"
+                to="/"
+                onClick={this.props.logout}
               >
-               Home
+               Logout
               </MenuItem>
             </div>
           </MenuList>
@@ -74,6 +75,13 @@ const mapStateToProps = (state) => {
     is_seller: state.auth.is_seller,
   };
 };
+
+
+const mapDispatchToProps = dispatch => {
+  return {
+      logout: () => dispatch(actions.logout()) 
+  }
+}
 
 // const mapDispatchToProps = dispatch => {
 // return {

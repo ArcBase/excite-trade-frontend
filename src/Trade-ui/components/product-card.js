@@ -1,72 +1,52 @@
-import React from 'react'
+import React, { Component } from "react";
+import axios from "axios";
 
-export default function ProductCard() {
+export default class ProductCard extends Component {
+  state = {
+    data: "",
+  };
+
+  getProducts = () => {
+    axios.get("https://trade-backn.herokuapp.com/marketplace/product-list/").then((res) => {
+      this.setState({
+        data: res.data,
+      });
+    });
+  };
+
+  componentDidMount() {
+    this.getProducts();
+  }
+
+  render() {
+    const { data } = this.state;
+    console.log(data);
+    const a = new Set(data)
+    const products = Array.from(a)
     return (
-        <div>
-            <ul className="product-card-grid">
+      <div>
+        <ul className="product-card-grid">
 
-                <li className="product-card-list">
-                <div className="product-card-img-content">
-                    <img
-                        className="page-img"
-                        src="https://images.unsplash.com/photo-1566037930079-5557545b02a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-                        />
-                        </div>
-                        <h3 >Solid Mineral Resources Supply</h3>
-                        <p>
-                        We execute the supply of a broad range of solid mineral resources to various ports in over 54+ countries around the world.
-                        </p>
-                        <button className="button-cool">
-                        Learn more
-                        </button>
-                    </li>
+        {products.map((r)=>(
+             <li key={r.id} className="product-card-list">
+             <div className="product-card-img-content">
+               <img
+                 className="page-img"
+                 src={r.Image} />
+             </div>
+             <h3>Gold</h3>
+             <p>
+               {r.Description}
+             </p>
+             <p>{r.Weight}</p>
+            <a href="">
+                <button className="button-cool">View</button>
+            </a>
+           </li>
+        )) }
 
-                    <li className="product-card-list">
-                    <div className="product-card-img-content">
-                        <img
-                        className="page-img"
-                        src="https://images.unsplash.com/photo-1586974710160-55f48f417990?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-                        />
-                        </div>
-                        <h3 >Petroleum Products Supply</h3>
-                        <p>
-                        We execute the supply of a broad range of petroleum products to various ports in over 54+ countries around the world.</p>  
-                        <button className="button-cool">
-                        Learn more
-                        </button>        
-                    </li>
-
-                    <li className="product-card-list">
-                    <div className="product-card-img-content">
-                        <img
-                        className="page-img"
-                        src="https://images.unsplash.com/photo-1515526764876-0f3b298ee4ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-                        />
-                        </div>
-                        <h3 >Petroleum Products Supply</h3>
-                        <p>
-                        We execute the supply of a broad range of petroleum products to various ports in over 54+ countries around the world.</p>  
-                        <button className="button-cool">
-                        Learn more
-                        </button>        
-                    </li>
-
-                    <li className="product-card-list">
-                    <div className="product-card-img-content">
-                        {/* <img
-                        className="page-img"
-                        src="https://image.freepik.com/free-vector/office-workers-analyzing-researching-business-data_74855-4445.jpg"
-                        /> */}
-                        </div>
-                        <h3 >Petroleum Products Supply</h3>
-                        <p>
-                        We execute the supply of a broad range of petroleum products to various ports in over 54+ countries around the world.</p>  
-                        <button className="button-cool">
-                        Learn more
-                        </button>        
-                    </li>
-
-                    </ul>
-        </div>
-    )
+        </ul>
+      </div>
+    );
+  }
 }

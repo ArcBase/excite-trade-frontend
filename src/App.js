@@ -18,7 +18,6 @@ import './assets/css/LoginLayout.css'
 import './assets/newcss/layout.css'
 import './assets/newcss/nav.css'
 import './assets/newcss/style.css'
-import './assets/newcss/ken.css'
 import './assets/newcss/fresh.css'
 
 //import "./App.css"
