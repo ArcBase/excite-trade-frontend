@@ -27,7 +27,7 @@ class toolbar extends Component {
             <ul>
               <li className="nav-it">
                 <a className="nav-link-text" href="/eproducts">
-                  Mineral Resources
+                   Resources
                 </a>
               </li>
               {isAuth ? (
