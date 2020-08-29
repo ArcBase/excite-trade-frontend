@@ -103,6 +103,7 @@ class ProductDetailTwo extends Component {
     if (this.props.token !== undefined && this.props.token !== null) {
       this.getProductDetails(this.props.token);
     }
+    this.getProductDetails();
   }
 
   componentWillReceiveProps(newProps) {
@@ -111,6 +112,8 @@ class ProductDetailTwo extends Component {
         this.getProductDetails(newProps.token);
       }
     }
+    this.getProductDetails();
+
   }
 
   render() {
@@ -140,55 +143,62 @@ class ProductDetailTwo extends Component {
              </ul>
         </div>
         <div className="product-detail-box-form">
-        <Form onFinish={this.createOrder}>
-                      <Form.Item>
-                        <h1 className="order-h1">Order Form</h1>
-                      </Form.Item>
+            {
+              token ? (
+                <Form onFinish={this.createOrder}>
+                <Form.Item>
+                  <h1 className="order-h1">Order Form</h1>
+                </Form.Item>
 
-                      <Form.Item rules={[{ required: true }]} name="Quantity">
-                        <Input placeholder="Quantity" enterButton />
-                      </Form.Item>
+                <Form.Item rules={[{ required: true }]} name="Quantity">
+                  <Input placeholder="Quantity" enterButton />
+                </Form.Item>
 
-                      <Form.Item rules={[{ required: true }]} name="Weight">
-                        <Input placeholder="Weight in tonnes" enterButton />
-                      </Form.Item>
+                <Form.Item rules={[{ required: true }]} name="Weight">
+                  <Input placeholder="Weight in tonnes" enterButton />
+                </Form.Item>
 
-                      <Form.Item
-                        rules={[{ required: true }]}
-                        name="DeliveryDate" label="Deliver Before"
-                      >
-                            <DatePicker defaultValue={moment('2020/01/01',dateFormat)} 
-                           format ={dateFormat} 
-                           />
-                      </Form.Item>
+                <Form.Item
+                  rules={[{ required: true }]}
+                  name="DeliveryDate" label="Deliver Before"
+                >
+                      <DatePicker defaultValue={moment('2020/01/01',dateFormat)} 
+                     format ={dateFormat} 
+                     />
+                </Form.Item>
 
-                      <Form.Item 
-                      name="PortType"
-                      placeholder="Port Type"
-                      >
-                      <Select>
-                        <Select.Option value="international">International</Select.Option>
-                        <Select.Option value="local">Local</Select.Option>
-                      </Select>
-                    </Form.Item>
+                <Form.Item 
+                name="PortType"
+                placeholder="Port Type"
+                >
+                <Select>
+                  <Select.Option value="international">International</Select.Option>
+                  <Select.Option value="local">Local</Select.Option>
+                </Select>
+              </Form.Item>
 
-                      <Form.Item
-                        rules={[{ required: true }]}
-                        name="PortLocation"
-                      >
-                        <Input placeholder="Port Locatiion" enterButton />
-                      </Form.Item>
+                <Form.Item
+                  rules={[{ required: true }]}
+                  name="PortLocation"
+                >
+                  <Input placeholder="Port Locatiion" enterButton />
+                </Form.Item>
 
-                      <Form.Item wrapperCol={{ span: 12, offset: 6 }}>
-                        <Button
-                          type="primary"
-                          htmlType="submit"
-                          onClick={this.handleSubmit}
-                        >
-                          Submit
-                        </Button>
-                      </Form.Item>
-                    </Form>
+                <Form.Item wrapperCol={{ span: 12, offset: 6 }}>
+                  <Button
+                    type="primary"
+                    htmlType="submit"
+                    onClick={this.handleSubmit}
+                  >
+                    Submit
+                  </Button>
+                </Form.Item>
+              </Form>
+              ):
+              (
+                <p className="product-text">Please <a href="/login" className="product-link">Login</a> to place an order</p>
+              )
+            }
         </div>
       </div>
 

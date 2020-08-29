@@ -412,3 +412,15 @@ border-radius: 3px;
 .texter-col{
   color: #000000;
 }
+
+.product-text{
+  color: #000000;
+}
+
+.product-link{
+  color: red;
+}
+
+.product-link:active{
+  color: purple;
+}
