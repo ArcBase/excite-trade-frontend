@@ -40,7 +40,7 @@ class ProductDetailTwo extends Component {
   state = {
     loading: false,
     error: null,
-    data: [],
+    data: '',
 
     tradeProductsDetail: [],
   };
@@ -128,7 +128,9 @@ class ProductDetailTwo extends Component {
             <div className="m-container">
                   <div className="product-detail-box">
         <div className="product-detail-box-1">
-            <img src="https://images.unsplash.com/photo-1524522173746-f628baad3644?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1103&q=80" />
+            <img 
+            src={data.Image}
+             />
         </div>
         <div className="product-detail-box-2">
             <h2><b>Description</b></h2>

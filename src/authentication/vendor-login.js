@@ -20,7 +20,7 @@ const Search = Input.Search;
 const { Option } = Select;
 
 
-class LoginForm extends React.Component {
+class VendorLoginForm extends React.Component {
   state = {
     username: "",
     password: ""
@@ -171,4 +171,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(LoginForm);
+)(VendorLoginForm);
