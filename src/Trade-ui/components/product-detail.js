@@ -120,6 +120,7 @@ class ProductDetailTwo extends Component {
     const { data, error, loading } = this.state;
     const item = data;
     console.log(data);
+    const {token} = this.state
     return (
 
         <div className="product-detail-container">

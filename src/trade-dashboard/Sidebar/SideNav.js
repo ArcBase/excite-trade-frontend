@@ -7,6 +7,7 @@ import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
 import clsx from "clsx";
 import { MenuItem, MenuList } from "@material-ui/core";
+import * as actions from "../../store/actions/auth";
 
 // import { faHamburger } from "@fortawesome/free-solid-svg-icons";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -54,9 +55,22 @@ class TempoaryDrawer extends React.Component {
               <MenuItem
                 className="menu-link-text"
                 component={Link}
-                to="/admin/vendor-control/"
+                to="/"
               >
                Home
+              </MenuItem>
+            </div>
+          </MenuList>
+          
+          <MenuList>
+            <div className="menu-link">
+              <MenuItem
+                className="menu-link-text"
+                component={Link}
+                to="/"
+                onClick={this.props.logout}
+              >
+               Logout
               </MenuItem>
             </div>
           </MenuList>
@@ -75,10 +89,11 @@ const mapStateToProps = (state) => {
   };
 };
 
-// const mapDispatchToProps = dispatch => {
-// return {
-//   member: (token) => dispatch(getMembership(token))
-// }
-// }
 
-export default connect(mapStateToProps)(TempoaryDrawer);
+const mapDispatchToProps = dispatch => {
+  return {
+      logout: () => dispatch(actions.logout()) 
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(TempoaryDrawer);
