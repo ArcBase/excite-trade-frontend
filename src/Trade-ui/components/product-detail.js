@@ -146,9 +146,7 @@ class ProductDetailTwo extends Component {
              </ul>
         </div>
         <div className="product-detail-box-form">
-            {
-              token ? (
-                <Form onFinish={this.createOrder}>
+        <Form onFinish={this.createOrder}>
                 <Form.Item>
                   <h1 className="order-h1">Order Form</h1>
                 </Form.Item>
@@ -197,11 +195,6 @@ class ProductDetailTwo extends Component {
                   </Button>
                 </Form.Item>
               </Form>
-              ):
-              (
-                <p className="product-text">Please <a href="/login" className="product-link">Login</a> to place an order</p>
-              )
-            }
         </div>
       </div>
 
