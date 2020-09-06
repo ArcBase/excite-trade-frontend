@@ -34,7 +34,7 @@ export default class ProductCard extends Component {
                  className="page-img"
                  src={r.Image} />
              </div>
-             <h3>Gold</h3>
+             {/* <h3>Gold</h3> */}
              <p>
                {r.Description}
              </p>

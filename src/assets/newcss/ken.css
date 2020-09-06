@@ -521,10 +521,12 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: white;
+  text-align: left;
 }
 
 .product-box p{
   color: rgb(255, 255, 255);
+  text-align: left;
 }
 
 /* Figure Boxes */
@@ -627,7 +629,7 @@
 }
 
 .product-detail-box-1 {
-  /* border: 1px solid grey; */
+  border: 1px solid grey;
   /* background: var(--primary); */
   text-align: center;
   color: black;
@@ -669,7 +671,24 @@
 .product-detail-container{
   margin-top: 20px;
 }
-
 .order-h1{
   font-size: 1.5rem;
+}
+
+.order-card{
+  /* border: 1px solid #ccc; */
+  margin-top: 20px;
+  width: 30%;
+  margin-left:20px;
+  box-shadow: var(--shadow);
+}
+
+.order-card h1 {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.order-card-content p{
+  color: black;
+  padding: 20px;
 }

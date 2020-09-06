@@ -14,7 +14,6 @@ import './assets/css/informationCards.css'
 import './assets/css/AuthenticationForms.css'
 import './assets/css/LoginLayout.css'
 
-
 import './assets/newcss/layout.css'
 import './assets/newcss/nav.css'
 import './assets/newcss/style.css'

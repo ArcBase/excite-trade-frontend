@@ -40,7 +40,7 @@ class ProductDetailTwo extends Component {
   state = {
     loading: false,
     error: null,
-    data: '',
+    data: [],
 
     tradeProductsDetail: [],
   };
@@ -103,7 +103,6 @@ class ProductDetailTwo extends Component {
     if (this.props.token !== undefined && this.props.token !== null) {
       this.getProductDetails(this.props.token);
     }
-    this.getProductDetails();
   }
 
   componentWillReceiveProps(newProps) {
@@ -112,15 +111,13 @@ class ProductDetailTwo extends Component {
         this.getProductDetails(newProps.token);
       }
     }
-    this.getProductDetails();
-
   }
 
   render() {
     const { data, error, loading } = this.state;
     const item = data;
     console.log(data);
-    const {token} = this.state
+    const {token} = this.props
     return (
 
         <div className="product-detail-container">
@@ -128,12 +125,10 @@ class ProductDetailTwo extends Component {
             <div className="m-container">
                   <div className="product-detail-box">
         <div className="product-detail-box-1">
-            <img 
-            src={data.Image}
-             />
+            <img src={data.Image} />
         </div>
         <div className="product-detail-box-2">
-            <h2><b>Description</b></h2>
+            <h2><b>Descriptions</b></h2>
             <p>
             Whether you want to purchase Zinc ore, Zinc concentrates, or Sphalerite as you may know it and have it shipped to any port around the world, our world-class
              team is built to help you close fast, safe, and profitable transactions on time, every time! </p>
@@ -144,57 +139,91 @@ class ProductDetailTwo extends Component {
                 <li>Quantity: Based On Buyer’s Specification</li>
 
              </ul>
+             <p> Origin: Nigeria Mineral Type:{data.Name}</p>
+                  <p> Physical Specification: Based On Buyer's Specification</p>                 
+                  <p> Quantity: Based On Buyer’s Specification Price: Negotiable</p>
+                  <p> Metric Tonne Trade Process: Ex Works/FOB/CIF Payment Method:</p>
+                  <p> 100% irrevocable SBLC or L/C at sight from a top 25 prime bank</p>
+                  <p> Shipping Time: 15 days after confirmation of L/C Loading Port:</p>
+                  <p> Lagos, Nigeria</p>
         </div>
+
         <div className="product-detail-box-form">
-        <Form onFinish={this.createOrder}>
-                <Form.Item>
-                  <h1 className="order-h1">Order Form</h1>
-                </Form.Item>
 
-                <Form.Item rules={[{ required: true }]} name="Quantity">
-                  <Input placeholder="Quantity" enterButton />
-                </Form.Item>
+        {
+          token ? (
+            <Form onFinish={this.createOrder}>
+            <Form.Item>
+              <h1 className="order-h1">Order Form</h1>
+            </Form.Item>
 
-                <Form.Item rules={[{ required: true }]} name="Weight">
-                  <Input placeholder="Weight in tonnes" enterButton />
-                </Form.Item>
+            <Form.Item rules={[{ required: true }]} name="Quantity">
+              <Input placeholder="Quantity" enterButton />
+            </Form.Item>
 
-                <Form.Item
-                  rules={[{ required: true }]}
-                  name="DeliveryDate" label="Deliver Before"
-                >
-                      <DatePicker defaultValue={moment('2020/01/01',dateFormat)} 
-                     format ={dateFormat} 
-                     />
-                </Form.Item>
+            <Form.Item rules={[{ required: true }]} name="Weight">
+              <Input placeholder="Weight in tonnes" enterButton />
+            </Form.Item>
 
-                <Form.Item 
-                name="PortType"
-                placeholder="Port Type"
-                >
-                <Select>
-                  <Select.Option value="international">International</Select.Option>
-                  <Select.Option value="local">Local</Select.Option>
-                </Select>
-              </Form.Item>
+            <Form.Item
+              rules={[{ required: true }]}
+              name="DeliveryDate" label="Deliver Before"
+            >
+                  <DatePicker defaultValue={moment('2020/01/01',dateFormat)} 
+                 format ={dateFormat} 
+                 />
+            </Form.Item>
 
-                <Form.Item
-                  rules={[{ required: true }]}
-                  name="PortLocation"
-                >
-                  <Input placeholder="Port Locatiion" enterButton />
-                </Form.Item>
+            <Form.Item
+              label="Delivery Port"
+            >
+            <Select
+             name="PortType"
+            defaultValue="local"
+            placeholder="Port Type"
+            >
+              <Select.Option value="international">International</Select.Option>
+              <Select.Option value="local">Local</Select.Option>
+            </Select>
+          </Form.Item>
 
-                <Form.Item wrapperCol={{ span: 12, offset: 6 }}>
-                  <Button
-                    type="primary"
-                    htmlType="submit"
-                    onClick={this.handleSubmit}
-                  >
-                    Submit
-                  </Button>
-                </Form.Item>
-              </Form>
+          <Form.Item
+          nname = 'DeliveryType'
+           label="Delivery Type"
+          >
+            <Select
+              name="Delievery Type"
+              defaultValue="fob"
+            >
+              <Select.Option value="fob">FOB - Free On Board</Select.Option>
+              <Select.Option value="pickup">Pick Up</Select.Option>
+            </Select>
+          </Form.Item>
+
+            <Form.Item
+             label=""
+              rules={[{ required: true }]}
+              name="PortLocation"
+            >
+              <Input placeholder="Port Locatiion" enterButton />
+            </Form.Item>
+
+            <Form.Item wrapperCol={{ span: 12, offset: 6 }}>
+              <Button
+                type="primary"
+                htmlType="submit"
+                onClick={this.handleSubmit}
+              >
+                Submit
+              </Button>
+            </Form.Item>
+          </Form>
+
+          ): (
+          <p className="product-text-black">Please <a className="product-text-link" href="/login">login</a> to make place an Order</p>
+          )
+        }
+
         </div>
       </div>
 

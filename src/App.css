@@ -413,14 +413,16 @@ border-radius: 3px;
   color: #000000;
 }
 
-.product-text{
+.product-text-black{
   color: #000000;
 }
-
-.product-link{
-  color: red;
+.product-text-link{
+  color: #bb0915;
 }
 
-.product-link:active{
-  color: purple;
+.product-text-link:active{
+  color: blue;
+}
+.product-card-img-content {
+  height:300px !important;
 }

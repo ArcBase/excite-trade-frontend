@@ -521,10 +521,12 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: rgb(0, 0, 0);
+  text-align: left;
 }
 
 .product-box p{
   color: rgb(0, 0, 0);
+  text-align: left;
 }
 
 /* Figure Boxes */
@@ -627,12 +629,18 @@
 }
 
 .product-detail-box-1 {
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
   /* background: var(--primary); */
   text-align: center;
   color: black;
+  height: 300px;
   /* padding: 1.5rem 2rem; */
   /* box-shadow: var(--shadow); */
+}
+
+.product-detail-box-1 img {
+  height: 500px;
+  width: 100%;
 }
 
 .product-detail-box-2 {
@@ -640,8 +648,8 @@
   /* background: var(--primary); */
   text-align: center;
   color: black;
-  width: 70%;
-  padding: 1.5rem 2rem;
+  width: 100%;
+  padding: 1rem 1rem;
   box-shadow: var(--shadow);
 }
 
@@ -664,6 +672,7 @@
 
 .product-detail-box-form{
   padding: 20px;
+  /* z-index:-1; */
 }
 
 .product-detail-container{

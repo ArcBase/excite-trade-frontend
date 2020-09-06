@@ -1,12 +1,10 @@
-import React, { Component } from 'react'
-import Nav from '../navbar'
-import Footer from './footer'
-import { Link, withRouter } from 'react-router-dom';
-import axios from 'axios';
-
+import React, { Component } from "react";
+import Nav from "../navbar";
+import Footer from "./footer";
+import { Link, withRouter } from "react-router-dom";
+import axios from "axios";
 
 export default class AgricPage extends Component {
-  
   state = {
     data: "",
   };
@@ -24,32 +22,33 @@ export default class AgricPage extends Component {
   }
 
   render() {
-   
     const { data } = this.state;
     console.log(data);
-    const a = new Set(data)
-    const products = Array.from(a)
+    const a = new Set(data);
+    const products = Array.from(a);
 
     return (
       <>
-        <Nav/>
-      <div className="m-container">
-        <div class="product-boxes">
+        <Nav />
+        <div className="m-container">
+          <div class="product-boxes">
+            {products.map((r) => (
+              <div class="product-box">
+                <Link to={`/e-p-detail/${r.id}`}>
+                 <h3>{r.Name}</h3>                 
+                </Link>
+                <div>
+                  <p> Origin: Nigeria Mineral Type:{r.Name}</p>
+                  <p> Physical Specification: Based On Buyer's Specification</p>                 
+                  <p> Quantity: Based On Buyer’s Specification Price: Negotiable</p>
 
-        {products.map((r) =>(
-        <div class="product-box">
-            <h3>{r.Name}</h3>
-              
-            <Link to={`/e-p-detail/${r.id}`}>
-                <p>{r.Description}</p>
-              </Link>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-        ))}
-
-        </div>
-      </div>
-      <Footer />
+        <Footer />
       </>
-    )
+    );
   }
 }
