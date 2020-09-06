@@ -631,6 +631,7 @@
 .product-detail-box-1 {
   /* border: 1px solid grey; */
   /* background: var(--primary); */
+  margin-bottom: 30px;
   text-align: center;
   color: black;
   height: 300px;
@@ -672,6 +673,7 @@
 
 .product-detail-box-form{
   padding: 20px;
+  margin-top: 50px;
   /* z-index:-1; */
 }
 
