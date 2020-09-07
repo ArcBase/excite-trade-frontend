@@ -18,11 +18,13 @@ import './assets/newcss/layout.css'
 import './assets/newcss/nav.css'
 import './assets/newcss/style.css'
 import './assets/newcss/fresh.css'
+import './assets/newcss/responsive.css'
 
 //import "./App.css"
 import * as actions from "./store/actions/auth";
-
 import CustomLayout from "./containers/Layout";
+import tawkTo from "tawkto-react";
+const tawkToPropertyId = "5ccd362fd07d7e0c6391e169";
 
 
 // import { library } from '@fortawesome/fontawesome-svg-core'
@@ -34,6 +36,8 @@ import CustomLayout from "./containers/Layout";
 class App extends Component {
   componentDidMount() {
     this.props.onTryAutoSignup();
+        tawkTo(tawkToPropertyId);
+  
   }
 
   render() {

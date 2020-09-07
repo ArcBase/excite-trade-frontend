@@ -8,6 +8,16 @@ import Logo from "./ExciteLogo.png";
 import * as actions from "../../../../store/actions/auth";
 
 class toolbar extends Component {
+
+  // state = {
+  //   data: ''
+  // }
+
+  // getCategories = () => {
+  //   axios.get('http://127.0.0.1:8')
+  // }
+
+
   render() {
     const { isAuth } = this.props;
     console.log(isAuth);
@@ -25,13 +35,31 @@ class toolbar extends Component {
           <div className="spacer" />
           <div className="toolbar_navigation-items">
             <ul>
+            <li className="nav-it">
+                <a className="nav-link-text" href={`/product-category/${3}`}>
+                  Petroluem Products
+                </a>
+              </li>
               <li className="nav-it">
-                <a className="nav-link-text" href="/eproducts">
+                <a className="nav-link-text" href={`/product-category/${2}`}>
+                Agriculture Products                  
+                </a>
+              </li>
+              <li className="nav-it">
+                <a className="nav-link-text" href={`/product-category/${1}`}>
                   Mineral Resources
                 </a>
               </li>
               {isAuth ? (
                 <>
+                  <li className="nav-it">
+                    <a
+                      className="nav-link-text"
+                      href="/customer-dashboard"
+                    >
+                      Dashboard
+                    </a>
+                  </li>                
                   <li className="nav-it">
                     <a
                       className="nav-link-text"

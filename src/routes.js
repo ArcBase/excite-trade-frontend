@@ -77,6 +77,9 @@ import AgricPage from './Trade-ui/components/agric-page'
 import BuyerRegistration from './authentication/buyer-registration'
 import BuyerOrderDetail from './customer/components/order-detail'
 
+import ProductCategory from './Trade-ui/components/products-category'
+import Voice from './Trade-ui/components/voice'
+
 const BaseRouter = () => (
   <Hoc>
     {/* Home */}
@@ -154,6 +157,10 @@ const BaseRouter = () => (
     <Route exact path="/customer-dashboard" component={CustomerDashboard} />
     <Route exact path="/customer-registration" component={BuyerRegistration} />
     <Route exact path="/buyer-detail/:orderID" component={BuyerOrderDetail} />
+
+    <Route exact path="/product-category/:categoryID" component={ProductCategory} />
+    <Route exact path="/voice" component={Voice} />
+
 
   </Hoc>
 );

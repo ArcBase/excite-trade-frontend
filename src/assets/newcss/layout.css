@@ -107,8 +107,16 @@ nav ul li a{
  border:2px solid #ffffff;
  color:#ffffff;
  background-color:transparent;
- 
+ margin: 10px;
 }
+
+.hire-btn-2{
+    border:2px solid #ffffff;
+    color:#ffffff;
+    background-color:transparent;    
+}
+   
+
 .down-cv{
  background-color:#0B0B0B;
  color:#fff; 

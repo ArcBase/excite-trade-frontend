@@ -535,8 +535,7 @@
 .figure-boxes {
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(4, 1fr);
-}
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));}
 
 .figure-box {
   /* background: var(--primary); */
@@ -631,7 +630,6 @@
 .product-detail-box-1 {
   /* border: 1px solid grey; */
   /* background: var(--primary); */
-  margin-bottom: 30px;
   text-align: center;
   color: black;
   height: 300px;
@@ -673,7 +671,6 @@
 
 .product-detail-box-form{
   padding: 20px;
-  margin-top: 50px;
   /* z-index:-1; */
 }
 
@@ -702,3 +699,4 @@
   color: black;
   padding: 20px;
 }
+
